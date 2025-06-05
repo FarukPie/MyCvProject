@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@Html.Partial("Header")
+<body id="page-top">
+    <!-- Navigation-->
+    @Html.Action("Navbar")
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <!-- About-->
+        @Html.Action("About")
+        <hr class="m-0" />
+        <!-- Experience-->
+        <section class="resume-section" id="experience">
+         @Html.Action("Experience")
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        @Html.Action("Education")
+        <hr class="m-0" />
+        <!-- Skills-->
+        @Html.Action("Skill")
+        <hr class="m-0" />
+        <!-- Interests-->
+        @Html.Action("Interest")
+        <hr class="m-0" />
+        <!-- Awards-->
+        @Html.Action("Award")
+        
+        <!--Contact-->
+        <section class="resume-section" id="contact">
+            @Html.Action("Contact")
+        </section>
+        <hr class="m-0" />
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="~/Templates/startbootstrap-resume-gh-pages/js/scripts.js"></script>
+</body>
+</html>
