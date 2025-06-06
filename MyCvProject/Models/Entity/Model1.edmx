@@ -5,8 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="MyCvDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MyCvDb.dbo.TblAbout' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblAbout">
           <Key>
             <PropertyRef Name="ID" />
@@ -20,8 +18,6 @@ warning 6002: The table/view 'MyCvDb.dbo.TblAbout' does not have a primary key d
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="ImgUrl" Type="nvarchar(max)" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MyCvDb.dbo.TblAdmin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblAdmin">
           <Key>
             <PropertyRef Name="ID" />
@@ -41,8 +37,6 @@ warning 6002: The table/view 'MyCvDb.dbo.TblAdmin' does not have a primary key d
           <Property Name="Message" Type="nvarchar(max)" />
           <Property Name="Date" Type="date" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MyCvDb.dbo.TblEducation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblEducation">
           <Key>
             <PropertyRef Name="ID" />
@@ -54,8 +48,6 @@ warning 6002: The table/view 'MyCvDb.dbo.TblEducation' does not have a primary k
           <Property Name="GPA" Type="nvarchar" MaxLength="100" />
           <Property Name="Date" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MyCvDb.dbo.TblExperience' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblExperience">
           <Key>
             <PropertyRef Name="ID" />
@@ -66,8 +58,6 @@ warning 6002: The table/view 'MyCvDb.dbo.TblExperience' does not have a primary 
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="Date" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MyCvDb.dbo.TblInterest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblInterest">
           <Key>
             <PropertyRef Name="ID" />
@@ -76,8 +66,6 @@ warning 6002: The table/view 'MyCvDb.dbo.TblInterest' does not have a primary ke
           <Property Name="Description1" Type="nvarchar(max)" />
           <Property Name="Description2" Type="nvarchar(max)" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MyCvDb.dbo.TblSertificate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblSertificate">
           <Key>
             <PropertyRef Name="ID" />
@@ -85,8 +73,6 @@ warning 6002: The table/view 'MyCvDb.dbo.TblSertificate' does not have a primary
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'MyCvDb.dbo.TblSkill' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblSkill">
           <Key>
             <PropertyRef Name="ID" />
@@ -95,64 +81,14 @@ warning 6002: The table/view 'MyCvDb.dbo.TblSkill' does not have a primary key d
           <Property Name="Skill" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="MyCvDbModelStoreContainer">
+          <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblAbout" EntityType="Self.TblAbout" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TblAbout].[ID] AS [ID], 
-    [TblAbout].[Name] AS [Name], 
-    [TblAbout].[Surname] AS [Surname], 
-    [TblAbout].[Adress] AS [Adress], 
-    [TblAbout].[Phone] AS [Phone], 
-    [TblAbout].[Mail] AS [Mail], 
-    [TblAbout].[Description] AS [Description], 
-    [TblAbout].[ImgUrl] AS [ImgUrl]
-    FROM [dbo].[TblAbout] AS [TblAbout]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TblAdmin].[ID] AS [ID], 
-    [TblAdmin].[UserName] AS [UserName], 
-    [TblAdmin].[Password] AS [Password]
-    FROM [dbo].[TblAdmin] AS [TblAdmin]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="TblEducation" EntityType="Self.TblEducation" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TblEducation].[ID] AS [ID], 
-    [TblEducation].[Title] AS [Title], 
-    [TblEducation].[SubTitle] AS [SubTitle], 
-    [TblEducation].[SubTitle2] AS [SubTitle2], 
-    [TblEducation].[GPA] AS [GPA], 
-    [TblEducation].[Date] AS [Date]
-    FROM [dbo].[TblEducation] AS [TblEducation]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="TblExperience" EntityType="Self.TblExperience" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TblExperience].[ID] AS [ID], 
-    [TblExperience].[Title] AS [Title], 
-    [TblExperience].[SubTitle] AS [SubTitle], 
-    [TblExperience].[Description] AS [Description], 
-    [TblExperience].[Date] AS [Date]
-    FROM [dbo].[TblExperience] AS [TblExperience]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="TblInterest" EntityType="Self.TblInterest" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TblInterest].[ID] AS [ID], 
-    [TblInterest].[Description1] AS [Description1], 
-    [TblInterest].[Description2] AS [Description2]
-    FROM [dbo].[TblInterest] AS [TblInterest]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="TblSertificate" EntityType="Self.TblSertificate" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TblSertificate].[ID] AS [ID], 
-    [TblSertificate].[Description] AS [Description]
-    FROM [dbo].[TblSertificate] AS [TblSertificate]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="TblSkill" EntityType="Self.TblSkill" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TblSkill].[ID] AS [ID], 
-    [TblSkill].[Skill] AS [Skill]
-    FROM [dbo].[TblSkill] AS [TblSkill]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="TblEducation" EntityType="Self.TblEducation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblExperience" EntityType="Self.TblExperience" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblInterest" EntityType="Self.TblInterest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSertificate" EntityType="Self.TblSertificate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSkill" EntityType="Self.TblSkill" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
