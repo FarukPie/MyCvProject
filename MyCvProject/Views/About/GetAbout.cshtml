@@ -1,0 +1,37 @@
+﻿@model MyCvProject.Models.Entity.TblAbout   
+@{
+    ViewBag.Title = "GetAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update About Section</h2>
+<br />
+<form method="post">
+    @Html.Label("About Id")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Name")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.Label("Surname")
+    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Adress")
+    @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+    <br />
+    @Html.Label("Phone")
+    @Html.TextAreaFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+    @Html.Label("Mail")
+    @Html.TextAreaFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.Label("Description")
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Image Url")
+    @Html.TextAreaFor(x => x.ImgUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Update About Section</button>
+</form>
+
+

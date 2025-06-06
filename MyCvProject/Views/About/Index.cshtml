@@ -1,20 +1,41 @@
-﻿
+﻿@using MyCvProject.Models.Entity
+@model List<TblAbout> 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>About Menu</h2><br /><br />
+<br />
+<h2>About List</h2>
 <table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Adress</th>
+        <th>Phone</th>
+        <th>Mail</th>
+        <th>Description</th>
+        <th>ImgUrl</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
 
-    <tr>
-       <th>ID</th>
-       <th>Name</th>
-       <th>Surname</th>
-    </tr>
-    <tr>
-        <th>1</th>
-        <th>omer</th>
-        <th>usak</th>
-    </tr>
+            <td>@item.ID</td>
+            <td>@item.Name</td>
+            <td>@item.Surname</td>
+            <td>@item.Adress</td>
+            <td>@item.Phone</td>
+            <td>@item.Mail</td>
+            <td>@item.Description</td>
+            <td>@item.ImgUrl</td>
+            <td><a href="/About/DeleteAbout/@item.ID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/About/GetAbout/@item.ID" class="btn btn-success">Update</a></td>
+
+        </tr>
+    }
 </table>
+<a href="/About/AddAbout" class="btn btn-primary">Add New About Section</a>
+
+
