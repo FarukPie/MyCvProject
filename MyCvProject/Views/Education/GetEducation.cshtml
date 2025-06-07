@@ -1,0 +1,29 @@
+﻿@model MyCvProject.Models.Entity.TblEducation
+@{
+    ViewBag.Title = "GetEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Update Education </h2>
+<br />
+<form method="post">
+    @Html.Label("About Id")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Title")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Surname")
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Adress")
+    @Html.TextBoxFor(x => x.SubTitle2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Phone")
+    @Html.TextAreaFor(x => x.GPA, new { @class = "form-control" })
+    <br />
+    @Html.Label("Mail")
+    @Html.TextAreaFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Update Education</button>
+</form>
+

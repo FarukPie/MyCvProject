@@ -14,14 +14,43 @@
         <tr>
             <th>ID</th>
             <th>Skills</th>
+            <th>Degree</th>
             <th>Delete</th>
             <th>Update</th>
         </tr>
         @foreach (var item in Model)
         {
+            string renk = "";
+            if (item.SkillValue >= 0 && item.SkillValue < 30)
+            {
+                renk = "progress-bar bg-danger";
+            }
+            else if (item.SkillValue >= 30 && item.SkillValue < 60)
+            {
+                renk = "progress-bar bg-warning";
+            }
+            else if (item.SkillValue >= 60 && item.SkillValue < 90)
+            {
+                renk = "progress-bar bg-info";
+            }
+            else if (item.SkillValue >= 90 && item.SkillValue <= 100)
+            {
+                renk = "progress-bar bg-success";
+            }
+
+
             <tr>
                 <td>@item.ID</td>
                 <td>@item.Skill</td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <div class="progress flex-grow-1" style="width: 80%;">
+                            <div class="@renk" role="progressbar" style="width: @item.SkillValue%"
+                                 aria-valuenow="@item.SkillValue" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="ml-2">%@item.SkillValue </span>
+                    </div>
+                </td>
                 <td>
                     <a href="/Skill/DeleteSkill/@item.ID" class="btn btn-danger btn-circle">
                         <i class="fas fa-trash"></i>
@@ -34,53 +63,15 @@
                 </td>
             </tr>
         }
+
+
+
     </table>
     <a href="/Skill/AddSkill" class="btn btn-primary">Add New Skill</a>
 
     <br /><br /><br />
 
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Skill Degree</h6>
-        </div>
-        <div class="card-body">
-            @foreach (var item in Model)
-            {
-                string renk = "";
-                if (item.SkillValue >= 0 && item.SkillValue < 30)
-                {
-                    renk = "progress-bar bg-danger";
-                }
-                else if (item.SkillValue >= 30 && item.SkillValue < 60)
-                {
-                    renk = "progress-bar bg-warning";
-                }
-                else if (item.SkillValue >= 60 && item.SkillValue < 90)
-                {
-                    renk = "progress-bar bg-info";
-                }
-                else if (item.SkillValue >= 90 && item.SkillValue <= 100)
-                {
-                    renk = "progress-bar bg-success";
-                }
-
-                <div class="d-flex align-items-center">
-                    <div class="col-md-4 text-left">
-                        <label class="font-weight-bold">@item.Skill</label>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="progress flex-grow-1">
-                            <div class="@renk" role="progressbar" style="width: @item.SkillValue%"
-                                 aria-valuenow="@item.SkillValue" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-right">
-                        <span>@item.SkillValue %</span>
-                    </div>
-                </div>
-            }
-        </div>
-    </div>
+   
 </body>
 
 </html>
