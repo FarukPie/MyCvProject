@@ -17,6 +17,9 @@
         <th>Mail</th>
         <th>Description</th>
         <th>ImgUrl</th>
+        <th>Delete</th>
+        <th>Update</th>
+
     </tr>
     @foreach (var item in Model)
     {
@@ -30,8 +33,16 @@
             <td>@item.Mail</td>
             <td>@item.Description</td>
             <td>@item.ImgUrl</td>
-            <td><a href="/About/DeleteAbout/@item.ID" class="btn btn-danger">Delete</a></td>
-            <td><a href="/About/GetAbout/@item.ID" class="btn btn-success">Update</a></td>
+            <td>
+                <a href="/About/DeleteAbout/@item.ID" class="btn btn-danger btn-circle">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+            <td>
+                <a href="/About/GetAbout/@item.ID" class="btn btn-info btn-circle">
+                    <i class="fas fa-info-circle"></i>
+                </a>
+            </td>
 
         </tr>
     }
