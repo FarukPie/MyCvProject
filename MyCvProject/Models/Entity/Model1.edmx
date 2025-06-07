@@ -79,6 +79,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Skill" Type="nvarchar(max)" />
+          <Property Name="SkillValue" Type="int" />
         </EntityType>
         <EntityContainer Name="MyCvDbModelStoreContainer">
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
@@ -168,6 +169,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Skill" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SkillValue" Type="Int32" />
         </EntityType>
         <EntityContainer Name="MyCvDbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" />
@@ -263,6 +265,7 @@
           <EntitySetMapping Name="TblSkill">
             <EntityTypeMapping TypeName="MyCvDbModel.TblSkill">
               <MappingFragment StoreEntitySet="TblSkill">
+                <ScalarProperty Name="SkillValue" ColumnName="SkillValue" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Skill" ColumnName="Skill" />
               </MappingFragment>

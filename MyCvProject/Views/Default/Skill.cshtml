@@ -15,15 +15,35 @@
         </ul>
         <div class="subheading mb-3">Workflow</div>
         <ul class="fa-ul mb-0">
-            @foreach (var item in Model)
-            {
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                   @item.Skill
-                </li>
-}
+            <form class="container">
+                <div class="row mb-3 align-items-center">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4 text-left">
+                            <label class="font-weight-bold">@item.Skill</label>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: @item.SkillValue%"
+                                     aria-valuenow="@item.SkillValue" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <span>@item.SkillValue %</span>
+                        </div>
 
-
+                    }
+                </div>
+            </form>
         </ul>
     </div>
+   
+          
+
+
+     
 </section>
+
+
+
+

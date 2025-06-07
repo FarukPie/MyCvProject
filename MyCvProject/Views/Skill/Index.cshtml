@@ -1,0 +1,69 @@
+﻿@model List<MyCvProject.Models.Entity.TblSkill>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body id="page-top">
+
+    <br />
+    <h2>Skill List</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Skills</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.ID</td>
+                <td>@item.Skill</td>
+
+                <td><a href="/Skill/DeleteSkill/@item.ID" class="btn btn-danger">Delete</a></td>
+                <td><a href="/Skill/GetSkill/@item.ID" class="btn btn-success">Update</a></td>
+
+            </tr>
+        }
+    </table>
+    <a href="/Skill/AddSkill" class="btn btn-primary">Add New Skill</a>
+
+    <br /><br /><br />
+    <!-- Project Card Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Skill Degree</h6>
+        </div>
+        <div class="card-body">
+            @foreach (var item in Model)
+            {
+                <div class="d-flex align-items-center">
+
+                    <div class="col-md-4 text-left">
+                        <label class="font-weight-bold">@item.Skill</label>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="progress flex-grow-1">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: @item.SkillValue%"
+                                 aria-valuenow="@item.SkillValue" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 text-right">
+                        <span>@item.SkillValue %</span>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</body>
+
+</html>

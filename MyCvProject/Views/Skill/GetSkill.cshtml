@@ -1,0 +1,21 @@
+﻿@model MyCvProject.Models.Entity.TblSkill
+@{
+    ViewBag.Title = "GetSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update Experiences</h2>
+<br />
+<form method="post">
+    @Html.Label("Skill Id")
+    @Html.TextBoxFor(x =>x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Skill")
+    @Html.TextBoxFor(x =>x.Skill, new { @class = "form-control" })
+    <br />
+    @Html.Label("Skill Value")
+    @Html.TextBoxFor(x => x.SkillValue, new { @class = "form-control" })
+    <br />
+  
+    <button class="btn btn-primary">Update Your Skills</button>
+</form>
