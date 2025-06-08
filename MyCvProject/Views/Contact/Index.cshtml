@@ -1,0 +1,41 @@
+﻿@using MyCvProject.Models.Entity
+@model List<MyCvProject.Models.Entity.TblContact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Contact List</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name & Surname</th>
+        <th>Mail Adress</th>
+        <th>Subject</th>
+        <th>Messege</th>
+        <th>Date</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.ID</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Mail</td>
+            <td>@item.Subject</td>
+            <td>@item.Message</td>
+            <td>@item.Date.ToString("yyyy-MM-dd")</td> 
+
+            <td>
+                <a href="/Contact/DeleteContact/@item.ID" class="btn btn-danger btn-circle">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+

@@ -68,6 +68,7 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public PartialViewResult Contact(TblContact t)
         {
+            t.Date = DateTime.Now;
             db.TblContact.Add(t);
             db.SaveChanges();
             return PartialView();
