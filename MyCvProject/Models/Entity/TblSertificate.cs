@@ -11,10 +11,12 @@ namespace MyCvProject.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblSertificate
     {
         public int ID { get; set; }
+        [Required(ErrorMessage ="Cannot be left empty")]
         public string Description { get; set; }
     }
 }

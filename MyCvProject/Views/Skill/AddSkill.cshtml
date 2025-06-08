@@ -1,4 +1,4 @@
-﻿
+﻿@model MyCvProject.Models.Entity.TblSkill
 @{
     ViewBag.Title = "AddSkill";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -10,8 +10,10 @@
 <form method="post">
 
     <input type="text" name="Skill" class="form-control" placeholder="Type New Skill" />
+    @Html.ValidationMessageFor(x => x.Skill, "", new { @style = "color:red" })
     <br />
     <input type="text" name="SkillValue" class="form-control" placeholder="Type New Skill Degree" />
+    @Html.ValidationMessageFor(x => x.SkillValue, "", new { @style = "color:red" })
     <br />
 
     <button class="btn btn-primary">Add your New Skill</button>

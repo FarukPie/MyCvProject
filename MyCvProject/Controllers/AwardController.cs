@@ -24,6 +24,10 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult AddSertificate(TblSertificate p)
         {
+            if(!ModelState.IsValid)
+            {
+                return View("AddSertificate");
+            }
             repo.Tadd(p);
             return RedirectToAction("Index");
         }

@@ -11,16 +11,24 @@ namespace MyCvProject.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblAbout
     {
         public int ID { get; set; }
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string Surname { get; set; }
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string Adress { get; set; }
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string Phone { get; set; }
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string Mail { get; set; }
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string Description { get; set; }
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string ImgUrl { get; set; }
     }
 }

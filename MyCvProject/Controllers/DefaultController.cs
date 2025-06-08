@@ -68,6 +68,10 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public PartialViewResult Contact(TblContact t)
         {
+            if (!ModelState.IsValid)
+            {
+                return PartialView();
+            }
             t.Date = DateTime.Now;
             db.TblContact.Add(t);
             db.SaveChanges();

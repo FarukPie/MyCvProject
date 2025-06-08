@@ -9,8 +9,10 @@
 <form method="post">
 
     <input type="text" name="Description1" class="form-control" placeholder="Type New Interest" />
+    @Html.ValidationMessageFor(x => x.Description1, "", new { @style = "color:red" })
     <br />
     <input type="text" name="Description2" class="form-control" placeholder="Type New Description" />
+    @Html.ValidationMessageFor(x => x.Description1, "", new { @style = "color:red" })
     <br />
     <button class="btn btn-primary">Add New Interest</button>
 </form>

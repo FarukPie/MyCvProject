@@ -25,6 +25,10 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult AddExperience(TblExperience p)
         {
+            if(!ModelState.IsValid)
+            {
+                return View("AddExperience");
+            }
             repo.Tadd(p);
             return RedirectToAction("Index");
         }

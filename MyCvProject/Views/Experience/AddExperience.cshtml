@@ -1,4 +1,4 @@
-﻿
+﻿@model MyCvProject.Models.Entity.TblExperience
 @{
     ViewBag.Title = "AddExperience";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -9,13 +9,16 @@
 <form method="post">
 
     <input type="text" name="Title" class="form-control" placeholder="Type New Title" />
+    @Html.ValidationMessageFor(x => x.Title, "", new { @Style = "color:red" })
     <br />
     <input type="text" name="SubTitle" class="form-control" placeholder="Type New SubTitle" />
+    @Html.ValidationMessageFor(x => x.SubTitle, "", new { @Style = "color:red" })
     <br />
     <input type="text" name="Date" class="form-control" placeholder="Type New Date" />
     <br />
     <textarea name="Description" class="form-control" rows="5" placeholder="Type New Description"></textarea>
+    @Html.ValidationMessageFor(x => x.Description, "", new { @Style = "color:red" })
     <br />
-    <button class="btn btn-primary" >Add New Experience</button>
+    <button class="btn btn-primary">Add New Experience</button>
 </form>
 

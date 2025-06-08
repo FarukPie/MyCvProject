@@ -16,14 +16,16 @@ namespace MyCvProject.Models.Entity
     public partial class TblContact
     {
         public int ID { get; set; }
-
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string NameSurname { get; set; }
-
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string Mail { get; set; }
-
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string Subject { get; set; }
-
+        [Required(ErrorMessage = "Cannot be left empty")]
         public string Message { get; set; }
+        [Required(ErrorMessage = "Cannot be left empty")]
+
         public Nullable<System.DateTime> Date { get; set; }
     }
 }

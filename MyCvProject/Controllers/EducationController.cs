@@ -26,6 +26,11 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult AddEducation(TblEducation p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("AddEducation");
+            }
+
             repo.Tadd(p);
             return RedirectToAction("Index");
         }

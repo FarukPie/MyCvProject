@@ -25,6 +25,10 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult AddSkill(TblSkill p)
         {
+            if(!ModelState.IsValid)
+            {
+                return View("Index");
+            }
             repo.Tadd(p);
             return RedirectToAction("Index");
         }

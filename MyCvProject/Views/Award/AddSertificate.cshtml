@@ -1,4 +1,4 @@
-﻿
+﻿@model MyCvProject.Models.Entity.TblSertificate
 @{
     ViewBag.Title = "AddSertificate";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -9,6 +9,7 @@
 <form method="post">
 
     <input type="text" name="Description" class="form-control" placeholder="Type New Sertificate" />
+    @Html.ValidationMessageFor(x => x.Description, "", new { @style = "color:red" })
     <br />
     <button class="btn btn-primary">Add New Sertificate</button>
 </form>

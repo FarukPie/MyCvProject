@@ -1,4 +1,4 @@
-﻿
+﻿@model MyCvProject.Models.Entity.TblEducation
 @{
     ViewBag.Title = "AddEducation";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -10,16 +10,27 @@
 <br />
 <form method="post">
 
-    <input type="text" name="Title" class="form-control" placeholder="Type New Title" />
+    @Html.Label("Title")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Title, "", new { @style = "color :red" })
     <br />
-    <input type="text" name="Subtitle" class="form-control" placeholder="Type New Subtitle" />
+    @Html.Label("Subtitle")
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SubTitle, "", new { @style = "color :red" })
     <br />
-    <input type="text" name="Degree" class="form-control" placeholder="Type New Degree" />
+    @Html.Label("Degree")
+    @Html.TextBoxFor(x => x.SubTitle2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SubTitle2, "", new { @style = "color :red" })
     <br />
-    <input type="text" name="Gpa" class="form-control" placeholder="Type New Gpa" />
+    @Html.Label("GPA")
+    @Html.TextBoxFor(x => x.GPA, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.GPA, "", new { @style = "color :red" })
     <br />
-    <input type="text" name="Date" class="form-control" placeholder="Type New Date" />
+    @Html.Label("Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Date, "")
     <br />
+
     <button class="btn btn-primary">Add New Education</button>
 </form>
 

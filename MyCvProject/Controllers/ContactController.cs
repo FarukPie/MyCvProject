@@ -13,6 +13,10 @@ namespace MyCvProject.Controllers
        GenericRepositories<TblContact> repo=new GenericRepositories<TblContact>();
         public ActionResult Index()
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Index");
+            }
             var degerler = repo.List(); 
             return View(degerler);
         }
@@ -24,8 +28,25 @@ namespace MyCvProject.Controllers
             return RedirectToAction("Index");
 
         }
+        [HttpGet]
+        public ActionResult AddContact()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddContact(TblContact p)
+        {
+            TblContact t = new TblContact();
+            t.NameSurname = Request.Form["NameSurname"];
+            t.Mail = Request.Form["Mail"];
+            t.Subject = Request.Form["Subject"];
+            t.Message = Request.Form["Message"];
+            t.Date = DateTime.Now;
+            repo.Tadd(t);
+            return RedirectToAction("Index");
+        }
 
-     
+
 
     }
 }

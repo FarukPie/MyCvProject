@@ -1,19 +1,29 @@
-﻿
+﻿@model MyCvProject.Models.Entity.TblContact
 <div class="resume-section-content">
     <form method="post">
         <h2 class="mb-5">Contact</h2>
 
         <label>Name Surname</label><br />
+        @Html.ValidationMessageFor(x => x.NameSurname, "", new { @style = "color:red" })
         <input type="text" class="form-control mb-3" placeholder="Enter your name" name="NameSurname" /><br />
 
+
         <label>Mail</label><br />
+        @Html.ValidationMessageFor(x => x.Mail, "", new { @style = "color:red" })
         <input type="text" class="form-control mb-3" placeholder="Enter your mail" name="Mail" /><br />
 
+
         <label>Subject</label><br />
+        @Html.ValidationMessageFor(x => x.Subject, "", new { @style = "color:red" })
         <input type="text" class="form-control mb-3" placeholder="Enter the subject" name="Subject" /><br />
 
+
         <label>Message</label><br />
+        @Html.ValidationMessageFor(x => x.Message, "", new { @style = "color:red" })
         <input type="text" class="form-control mb-3" placeholder="Enter your message" name="Message" /><br />
+
+        <br />
+
 
         <input type="hidden" name="Date" value="@DateTime.Now.ToString("dd-MM-yyyy")" />
 

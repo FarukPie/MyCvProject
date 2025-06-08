@@ -23,7 +23,10 @@ namespace MyCvProject.Controllers
         }
         [HttpPost]
         public ActionResult AddInterest(TblInterest p)
-        {
+        { if(!ModelState.IsValid)
+            {
+                return View("AddInterest");
+            }
             repo.Tadd(p);
             return RedirectToAction("Index");
         }

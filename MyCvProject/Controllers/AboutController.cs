@@ -24,7 +24,13 @@ namespace MyCvProject.Controllers
         }
         [HttpPost]
         public ActionResult AddAbout(TblAbout p)
+
         {
+            if (!ModelState.IsValid)
+            {
+                return View("AddAbout");
+            }
+
             repo.Tadd(p);
             return RedirectToAction("Index");
         }
