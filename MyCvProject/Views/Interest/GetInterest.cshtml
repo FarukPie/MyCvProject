@@ -1,0 +1,24 @@
+﻿@model MyCvProject.Models.Entity.TblInterest
+@{
+    ViewBag.Title = "GetInterest";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update Interest</h2>
+<br />
+<form method="post">
+    @Html.Label("About Id")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Your Interest")
+    @Html.TextBoxFor(x => x.Description1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Description")
+    @Html.TextBoxFor(x => x.Description2, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Update Interest</button>
+</form>
+
+
+
+

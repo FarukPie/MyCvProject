@@ -62,7 +62,7 @@ namespace MyCvProject.Controllers
         [HttpGet]
         public PartialViewResult Contact()
         {
-       
+
             return PartialView();
         }
         [HttpPost]

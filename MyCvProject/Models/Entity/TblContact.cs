@@ -11,13 +11,18 @@ namespace MyCvProject.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblContact
     {
         public int ID { get; set; }
+        [Required(ErrorMessage = "Name and Surname are required.")]
         public string NameSurname { get; set; }
+        [Required(ErrorMessage = "Mail is required.")]
         public string Mail { get; set; }
+        [Required(ErrorMessage = "Subject is required.")]
         public string Subject { get; set; }
+        [Required(ErrorMessage = "Message is required.")]
         public string Message { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
     }
