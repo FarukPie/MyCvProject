@@ -11,6 +11,8 @@ namespace MyCvProject.Repositories
     {
         MyCvDbEntities db = new MyCvDbEntities();
 
+        public object TblAdmin { get; internal set; }
+
         public List<T> List()
         {
            return db.Set<T>().ToList();

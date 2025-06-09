@@ -7,6 +7,7 @@ using MyCvProject.Models.Entity;
 
 namespace MyCvProject.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         MyCvDbEntities db = new MyCvDbEntities();   
