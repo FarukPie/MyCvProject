@@ -61,10 +61,11 @@ Main database tables include:
 4. Press `Ctrl + F5` to run the application.
 
 
+![image](https://github.com/user-attachments/assets/a0050166-2048-4358-b931-fe4b02f2b2a4)
+
+![image](https://github.com/user-attachments/assets/50efd59d-d69a-4b91-bf2f-9479e0dd3441)
 
 ![image](https://github.com/user-attachments/assets/2f9d1c5a-87e3-494a-a951-390aff44ebcb)
-![image](https://github.com/user-attachments/assets/a0050166-2048-4358-b931-fe4b02f2b2a4)
-![image](https://github.com/user-attachments/assets/50efd59d-d69a-4b91-bf2f-9479e0dd3441)
 
 ## 📄 Sample Admin Credentials
 
