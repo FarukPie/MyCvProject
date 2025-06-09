@@ -67,9 +67,5 @@ Main database tables include:
 
 ![image](https://github.com/user-attachments/assets/2f9d1c5a-87e3-494a-a951-390aff44ebcb)
 
-## 📄 Sample Admin Credentials
 
-```text
-Username: admin  
-Password: 1234
 
