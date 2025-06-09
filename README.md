@@ -66,7 +66,8 @@ Main database tables include:
 
 
 
-![image](https://github.com/user-attachments/assets/a0050166-2048-4358-b931-fe4b02f2b2a4)
+![screencapture-localhost-44343-default-Index-2025-06-10-00_39_11](https://github.com/user-attachments/assets/59def4d3-9304-4278-862e-62d38d90427f)
+
 
 ![image](https://github.com/user-attachments/assets/50efd59d-d69a-4b91-bf2f-9479e0dd3441)
 
