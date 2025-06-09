@@ -9,22 +9,23 @@
 <br />
 <form method="post">
 
-    <input type="text" name="Name" class="form-control" placeholder="Type New Name" />
+    <input type="text" name="Name" class="form-control" placeholder="Type New Name (This field must be filled in)" />
     @Html.ValidationMessageFor(x => x.Name, "", new { @style = "color :red" })
     <br />
-    <input type="text" name="Surname" class="form-control" placeholder="Type New Surname" />
+    <input type="text" name="Surname" class="form-control" placeholder="Type New Surname (This field must be filled in)" />
     @Html.ValidationMessageFor(x => x.Surname, "", new { @style = "color :red" })
     <br />
-    <input type="text" name="Adress" class="form-control" placeholder="Type New Adress" />
+    <input type="text" name="Adress" class="form-control" placeholder="Type New Adress (This field must be filled in)" />
     @Html.ValidationMessageFor(x => x.Adress, "", new { @style = "color :red" })
     <br />
-    <input type="text" name="Phone" class="form-control" placeholder="Type New Phone" />
+    <input type="text" name="Phone" class="form-control" placeholder="Type New Phone (This field is mandatory and must be 11 digits.)" />
     @Html.ValidationMessageFor(x => x.Phone, "", new { @style = "color :red" })
+
     <br />
-    <input type="text" name="Mail" class="form-control" placeholder="Type New Mail" />
+    <input type="text" name="Mail" class="form-control" placeholder="Type New Mail (This field must be filled in)"  />
     @Html.ValidationMessageFor(x => x.Mail, "", new { @style = "color :red" })
     <br />
-    <textarea name="Description" class="form-control" rows="5" placeholder="Type New Description"></textarea>
+    <textarea name="Description" class="form-control" rows="5" placeholder="Type New Description (This field must be filled in) "></textarea>
     @Html.ValidationMessageFor(x => x.Description, "", new { @style = "color :red" })
     <br />
     <input type="text" name="ImageUrl" class="form-control" placeholder="Type New ImageUrl" />

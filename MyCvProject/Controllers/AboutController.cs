@@ -43,6 +43,7 @@ namespace MyCvProject.Controllers
         [HttpGet]
         public ActionResult GetAbout(int id)
         {
+           
             TblAbout t = repo.Find(x => x.ID == id);
             return View(t);
 
@@ -51,6 +52,11 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult GetAbout(TblAbout p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("GetAbout");
+            }
+
             TblAbout t = repo.Find(x => x.ID == p.ID);
             t.Name = p.Name;
             t.Surname = p.Surname;

@@ -49,6 +49,10 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult GetSertificate(TblSertificate p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             TblSertificate t = repo.Find(x => x.ID == p.ID);
             t.Description = p.Description;
             repo.TUpdate(t);

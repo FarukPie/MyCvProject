@@ -18,7 +18,7 @@ namespace MyCvProject.Models.Entity
         public int ID { get; set; }
         [Required(ErrorMessage ="Cannot be left empty")]
         public string Description1 { get; set; }
-        [Required(ErrorMessage = "Cannot be left empty")]
+
         public string Description2 { get; set; }
     }
 }

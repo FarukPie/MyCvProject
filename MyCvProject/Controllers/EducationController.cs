@@ -50,6 +50,10 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult GetEducation(TblEducation p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             TblEducation t = repo.Find(x => x.ID == p.ID);
             t.Title = p.Title;
             t.SubTitle = p.SubTitle;

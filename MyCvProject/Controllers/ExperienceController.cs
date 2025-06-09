@@ -51,6 +51,10 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult GetExperience(TblExperience p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("GetExperience");
+            }
             TblExperience t = repo.Find(x => x.ID == p.ID);
             t.Title = p.Title;
             t.SubTitle = p.SubTitle;

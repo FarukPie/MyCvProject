@@ -12,21 +12,27 @@
     <br />
     @Html.Label("Name")
     @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Name, "", new { @style = "color:red" })
     <br />
     @Html.Label("Surname")
     @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Surname, "", new { @style = "color:red" })
     <br />
     @Html.Label("Adress")
     @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Adress, "", new { @style = "color:red" })
     <br />
     @Html.Label("Phone")
     @Html.TextAreaFor(x => x.Phone, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Phone, "", new { @style = "color:red" })
     <br />
     @Html.Label("Mail")
     @Html.TextAreaFor(x => x.Mail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Mail, "", new { @style = "color:red" })
     <br />
     @Html.Label("Description")
     @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Description, "", new { @style = "color:red" })
     <br />
     @Html.Label("Image Url")
     @Html.TextAreaFor(x => x.ImgUrl, new { @class = "form-control" })

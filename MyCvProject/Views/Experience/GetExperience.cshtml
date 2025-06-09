@@ -9,18 +9,23 @@
 <form method="post">
     @Html.Label("Experience Id")
     @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+
     <br />
     @Html.Label("Experience Title")
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Title, "", new { @style = "color:red" })
     <br />
     @Html.Label("Experience SubTitle")
     @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SubTitle, "", new { @style = "color:red" })
     <br />
     @Html.Label("Experience Date")
     @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Date, "", new { @style = "color:red" })
     <br />
     @Html.Label("Experience Description")
     @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Description, "", new { @style = "color:red" })
     <br />
     <button class="btn btn-primary">Update Experiences</button>
 </form>

@@ -47,6 +47,10 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult GetInterest(TblInterest p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("GetInterest");
+            }
             TblInterest t=repo.Find(x=>x.ID == p.ID);
             t.Description1=p.Description1;
             t.Description2=p.Description2;

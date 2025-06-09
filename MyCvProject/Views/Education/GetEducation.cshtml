@@ -8,21 +8,28 @@
 <form method="post">
     @Html.Label("About Id")
     @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+
     <br />
     @Html.Label("Title")
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Title, "", new { @style = "color:red" })
     <br />
-    @Html.Label("Surname")
+    @Html.Label("Subtitle")
     @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SubTitle, "", new { @style = "color:red" })
     <br />
-    @Html.Label("Adress")
+    @Html.Label("Degree")
     @Html.TextBoxFor(x => x.SubTitle2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SubTitle2, "", new { @style = "color:red" })
     <br />
-    @Html.Label("Phone")
+    @Html.Label("Gpa")
     @Html.TextAreaFor(x => x.GPA, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.GPA, "", new { @style = "color:red" })
     <br />
-    @Html.Label("Mail")
+    @Html.Label("Date")
     @Html.TextAreaFor(x => x.Date, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Date, "", new { @style = "color:red" })
+
     <br />
     <button class="btn btn-primary">Update Education</button>
 </form>

@@ -8,14 +8,16 @@
 <br />
 <form method="post">
     @Html.Label("Skill Id")
-    @Html.TextBoxFor(x =>x.ID, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
     <br />
     @Html.Label("Skill")
-    @Html.TextBoxFor(x =>x.Skill, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Skill, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Skill, "", new { @style = "color:red" })
     <br />
     @Html.Label("Skill Value")
     @Html.TextBoxFor(x => x.SkillValue, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Skill, "", new { @style = "color:red" })
     <br />
-  
+
     <button class="btn btn-primary">Update Your Skills</button>
 </form>

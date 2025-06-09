@@ -18,7 +18,6 @@ namespace MyCvProject.Models.Entity
         public int ID { get; set; }
         [Required(ErrorMessage ="Cannot be left empty")]
         public string Skill { get; set; }
-        [Required(ErrorMessage = "Cannot be left empty")]
         public Nullable<int> SkillValue { get; set; }
     }
 }

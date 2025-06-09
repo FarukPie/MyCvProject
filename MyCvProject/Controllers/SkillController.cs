@@ -51,6 +51,10 @@ namespace MyCvProject.Controllers
         [HttpPost]
         public ActionResult GetSkill(TblSkill p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Index");
+            }
             TblSkill t = repo.Find(x => x.ID == p.ID);
             t.Skill = p.Skill;
             t.SkillValue = p.SkillValue;
