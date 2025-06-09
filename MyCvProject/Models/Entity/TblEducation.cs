@@ -11,22 +11,14 @@ namespace MyCvProject.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-
+    
     public partial class TblEducation
     {
         public int ID { get; set; }
-
-        [Required(ErrorMessage = "Cannot be left empty")]
         public string Title { get; set; }
-        [Required(ErrorMessage = "Cannot be left empty")]
         public string SubTitle { get; set; }
-        [Required(ErrorMessage = "Cannot be left empty")]
         public string SubTitle2 { get; set; }
-        [Required(ErrorMessage = "Cannot be left empty")]
         public string GPA { get; set; }
-
         public string Date { get; set; }
     }
 }

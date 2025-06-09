@@ -1,0 +1,28 @@
+﻿@model MyCvProject.Models.Entity.TblSocialMedia
+@{
+    ViewBag.Title = "GetSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Update Social Media</h2>
+<br />
+<form method="post">
+    @Html.Label("Social Media Id")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Social Media Name")
+    @Html.TextBoxFor(x =>x.SocialMediaName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SocialMediaName, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Link")
+    @Html.TextBoxFor(x => x.Link, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Link, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Icon")
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Update Social Media</button>
+</form>
+
+
+
+

@@ -11,14 +11,18 @@ namespace MyCvProject.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class TblContact
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class TblSocialMedia
     {
         public int ID { get; set; }
-        public string NameSurname { get; set; }
-        public string Mail { get; set; }
-        public string Subject { get; set; }
-        public string Message { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+
+        [Required(ErrorMessage = "Cannot be left empty")]
+        public string SocialMediaName { get; set; }
+        [Required(ErrorMessage = "Cannot be left empty")]
+        public string Link { get; set; }
+       
+        public string Icon { get; set; }
+
     }
 }

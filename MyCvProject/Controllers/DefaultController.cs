@@ -34,6 +34,11 @@ namespace MyCvProject.Controllers
             var degerler = db.TblAbout.ToList();    
             return PartialView(degerler);
         }
+        public PartialViewResult SocialMedia()
+        {
+            var degerler = db.TblSocialMedia.ToList(); 
+            return PartialView(degerler);
+        }
         public PartialViewResult Experience()
         {
             var degerler = db.TblExperience.ToList();

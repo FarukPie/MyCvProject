@@ -33,5 +33,6 @@ namespace MyCvProject.Models.Entity
         public virtual DbSet<TblInterest> TblInterest { get; set; }
         public virtual DbSet<TblSertificate> TblSertificate { get; set; }
         public virtual DbSet<TblSkill> TblSkill { get; set; }
+        public virtual DbSet<TblSocialMedia> TblSocialMedia { get; set; }
     }
 }

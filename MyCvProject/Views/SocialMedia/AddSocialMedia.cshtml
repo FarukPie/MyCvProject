@@ -1,0 +1,22 @@
+﻿@model MyCvProject.Models.Entity.TblSocialMedia
+@{
+    ViewBag.Title = "AddSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>New Social Media</h2>
+<br />
+<form method="post">
+
+    <input type="text" name="SocialMediaName" class="form-control" placeholder="Type New Social Media (This field must be filled in)" />
+    @Html.ValidationMessageFor(x => x.SocialMediaName, "", new { @style = "color :red" })
+    <br />
+    <input type="text" name="Link" class="form-control" placeholder="Type New Link (This field must be filled in)" />
+    @Html.ValidationMessageFor(x => x.Link, "", new { @style = "color :red" })
+    <br />
+    <input type="text" name="Icon" class="form-control" placeholder="Type New Icon" />
+    <br />
+    <button class="btn btn-primary">Add New Social Media</button>
+</form>
+
+
+

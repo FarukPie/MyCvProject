@@ -1,0 +1,42 @@
+﻿@using MyCvProject.Models.Entity
+@model List<TblSocialMedia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Social Media List</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Social Media Name</th>
+        <th>Link</th>
+        <th>Icon</th>
+     
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.ID</td>
+            <td>@item.SocialMediaName</td>
+            <td>@item.Link</td>
+            <td>@item.Icon</td>
+        
+
+            <td>
+                <a href="/SocialMedia/DeleteSocialMedia/@item.ID" class="btn btn-danger btn-circle">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+            <td>
+                <a href="/SocialMedia/GetSocialMedia/@item.ID" class="btn btn-info btn-circle">
+                    <i class="fas fa-info-circle"></i>
+                </a>
+            </td>
+
+        </tr>
+    }
+</table>
+<a href="/SocialMedia/AddSocialMedia" class="btn btn-primary">Add New Education</a>
