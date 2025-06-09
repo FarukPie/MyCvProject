@@ -72,5 +72,3 @@ Main database tables include:
 Username: admin  
 Password: 1234
 
-
-f
