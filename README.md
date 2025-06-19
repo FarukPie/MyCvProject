@@ -26,7 +26,7 @@ This project is a **CV (Curriculum Vitae) website application** developed using 
   - Work Experience  
   - Skills  
   - Projects  
-  - Contact Information
+  - Contact Information.
 
 - **Frontend (Public UI):**  
   Visitors can view the CV information through a clean and responsive interface.
