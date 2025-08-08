@@ -12,6 +12,7 @@ This project is a **CV (Curriculum Vitae) website application** developed using 
 - Visual Studio
 - IIS Express (or local server)
 
+
 ## 🧠 Key Features
 
 - **Login & Logout:**  
@@ -34,11 +35,13 @@ This project is a **CV (Curriculum Vitae) website application** developed using 
 - **Database-First Architecture:**  
   The application connects to an existing SQL Server database. Models and context classes are generated via Entity Framework.
 
+
 ## 🔐 Authentication
 
 - Built with **Forms Authentication**.
 - Access is controlled using `[Authorize]` and `[AllowAnonymous]` attributes.
 - Admin areas are restricted to authenticated users only.
+
 
 ## 🗃️ Database Structure
 
@@ -52,6 +55,7 @@ Main database tables include:
 - TblProject  
 - TblContact  
 - etc.
+
   
 ## 📁 Project Setup
 
